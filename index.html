@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <canvas class="fifth24_first_doughnut"></canvas>
+            </div>
+            <div class="col-3">
+                <canvas class="fifth24_first_pie"></canvas>
+            </div>
+            <div class="col-3">
+                <canvas class="fifth24_first_bar"></canvas>
+            </div>
+            <div class="col-3">
+                <canvas class="fifth24_first_line"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const fifth24_first_doughnut = document.getElementsByClassName('fifth24_first_doughnut');
+
+        $.each(fifth24_first_doughnut, function (i, v) {
+            new Chart(v, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Target 500',
+                        'Achieve 350',
+                    ],
+
+                    datasets: [{
+                        label: 'Certified',
+                        data: [500, 350],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+            });
+        })
+        const fifth24_first_pie = document.getElementsByClassName('fifth24_first_pie');
+
+        $.each(fifth24_first_pie, function (i, v) {
+            new Chart(v, {
+                type: 'pie',
+                data: {
+                    labels: [
+                        'Target 500',
+                        'Achieve 350',
+                    ],
+
+                    datasets: [{
+                        label: 'Certified',
+                        data: [500, 350],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+            });
+        })
+        const fifth24_first_bar = document.getElementsByClassName('fifth24_first_bar');
+
+        $.each(fifth24_first_bar, function (i, v) {
+            new Chart(v, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Target 500',
+                        'Achieve 350',
+                    ],
+
+                    datasets: [{
+                        label: 'Certified',
+                        data: [500, 350],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+            });
+        })
+        const fifth24_first_line = document.getElementsByClassName('fifth24_first_line');
+
+        $.each(fifth24_first_line, function (i, v) {
+            new Chart(v, {
+                type: 'line',
+                data: {
+                    labels: [
+                        'Target 500',
+                        'Achieve 350',
+                    ],
+
+                    datasets: [{
+                        label: 'Certified',
+                        data: [500, 350],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+            });
+        })
+    </script>
+</body>
+
+</html>
